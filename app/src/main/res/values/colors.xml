@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="background">#f3f3f4</color>
+  <color name="background_menu">#337ab7</color>
+  <color name="background_menu_highlight">#2f4050</color>
+  <color name="fontColorMT">#a7b1c2</color>
+  <color name="fontColorMT_strong">#676a6c</color>
+
+  <color name="plain">#d1dade</color>
+  <color name="primary">#1ab394</color>
+  <color name="info">#23c6c8</color>
+  <color name="success">#4682b4</color>
+  <color name="warning">#f8ac59</color>
+  <color name="danger">#ed5565</color>
+
+  <color name="primary_pressed">#18a689</color>
+
+  <color name="black">#000000</color>
+  <color name="jet">#222222</color>
+  <color name="oil">#333333</color>
+  <color name="monsoon">#777777</color>
+  <color name="jumbo">#888888</color>
+  <color name="aluminum">#999999</color>
+  <color name="base">#AAAAAA</color>
+  <color name="iron">#CCCCCC</color>
+  <color name="white">#ffffff</color>
+</resources>
