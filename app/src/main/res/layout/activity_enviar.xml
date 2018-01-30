@@ -16,13 +16,22 @@
             android:orientation="vertical"
             android:paddingLeft="24dp"
             android:paddingRight="24dp"
-            android:paddingTop="56dp">
+            android:paddingTop="24dp">
 
             <!-- Name Label -->
-            <CheckBox
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Entregado" />
+                android:text="Contenido nombre"
+                android:textAlignment="center"
+                android:textColor="@color/fontColorMT_strong" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entregado"
+                android:textColor="@color/fontColorMT" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -35,7 +44,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Recibido por"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:textColor="@color/fontColorMT" />
             </android.support.design.widget.TextInputLayout>
 
             <!-- Address Label -->
@@ -50,7 +60,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="RUT"
-                    android:inputType="textPostalAddress" />
+                    android:inputType="textPostalAddress"
+                    android:textColor="@color/fontColorMT" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -66,7 +77,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Observación"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/fontColorMT" />
             </android.support.design.widget.TextInputLayout>
 
 

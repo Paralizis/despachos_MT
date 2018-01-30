@@ -1,32 +1,29 @@
 package cl.mundotour.intranet.mtdespachos;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import butterknife.ButterKnife;
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
-public class SignupActivity extends AppCompatActivity {
-    private static final String TAG = "SignupActivity";
+public class EnviarActivity extends AppCompatActivity {
+    private static final String TAG = "EnviarActivity";
 
     @Bind(R.id.input_name) EditText _nameText;
     @Bind(R.id.input_address) EditText _addressText;
     @Bind(R.id.input_email) EditText _emailText;
-    @Bind(R.id.input_password) EditText _passwordText;
     @Bind(R.id.btn_signup) Button _signupButton;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_enviar);
         ButterKnife.bind(this);
 
         _signupButton.setOnClickListener(new View.OnClickListener() {
@@ -47,8 +44,8 @@ public class SignupActivity extends AppCompatActivity {
 
         _signupButton.setEnabled(false);
 
-        final ProgressDialog progressDialog = new ProgressDialog(SignupActivity.this,
-                R.style.AppTheme_Dark_Dialog);
+        final ProgressDialog progressDialog = new ProgressDialog(EnviarActivity.this,
+                R.style.AppTheme_MT);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Creating Account...");
         progressDialog.show();
@@ -56,7 +53,6 @@ public class SignupActivity extends AppCompatActivity {
         String name = _nameText.getText().toString();
         String address = _addressText.getText().toString();
         String email = _emailText.getText().toString();
-        String password = _passwordText.getText().toString();
 
         // TODO: Implement your own signup logic here.
 
@@ -91,7 +87,6 @@ public class SignupActivity extends AppCompatActivity {
         String name = _nameText.getText().toString();
         String address = _addressText.getText().toString();
         String email = _emailText.getText().toString();
-        String password = _passwordText.getText().toString();
 
         if (name.isEmpty() || name.length() < 3) {
             _nameText.setError("at least 3 characters");
@@ -113,13 +108,6 @@ public class SignupActivity extends AppCompatActivity {
             valid = false;
         } else {
             _emailText.setError(null);
-        }
-
-        if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
-            _passwordText.setError("between 4 and 10 alphanumeric characters");
-            valid = false;
-        } else {
-            _passwordText.setError(null);
         }
 
         return valid;
